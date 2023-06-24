@@ -1,9 +1,10 @@
 import './globals.css'
-import { Nunito } from 'next/font/google'
+import { Cabin } from 'next/font/google'
 
-import { Navbar } from '@/components'
+import { ClientOnly, Modal, Navbar, RegisterModal } from '@/components'
+import { ToasterProvider } from '@/src/providers'
 
-const font = Nunito({ subsets: ['latin'] })
+const font = Cabin({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Airbnb Clone',
@@ -18,7 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar />
+        <ClientOnly>
+          <ToasterProvider />
+          <RegisterModal />
+          <Navbar />
+        </ClientOnly>
         {children}
       </body>
     </html>
