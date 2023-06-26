@@ -16,6 +16,7 @@ const Logo = () => {
             width={45}
             height={45}
             className='md:block cursor-pointer object-contain' //hidden
+            onClick={() => router.push('/')}
         />
     )
 }

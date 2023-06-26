@@ -6,11 +6,16 @@ import UserMenu from "./UserMenu";
 import Avatar from "./Avatar";
 import MenuItem from "./MenuItem";
 import ClientOnly from "./ClientOnly";
-import Modal from "./modal/Modal";
 import Button from "./Button";
-import RegisterModal from "./modal/RegisterModal";
 import Heading from "./Heading";
 import Input from "./input/Input";
+import Categories from "./Categories";
+import CategoryBox from "./CategoryBox";
+import Modal from "./modal/Modal";
+import RegisterModal from "./modal/RegisterModal";
+import LoginModal from "./modal/LoginModal";
+import RentModal from "./modal/RentModal";
+import CategoryInput from "./CategoryInput";
 
 export {
     Navbar,
@@ -21,9 +26,14 @@ export {
     Avatar,
     MenuItem,
     ClientOnly,
-    Modal,
     Button,
-    RegisterModal,
     Heading,
     Input,
+    Categories,
+    CategoryBox,
+    Modal,
+    RegisterModal,
+    LoginModal,
+    RentModal,
+    CategoryInput,
 }

@@ -1,10 +1,8 @@
 import { Cabin } from 'next/font/google'
 import './globals.css'
 
-import { ClientOnly, Navbar } from '@/components'
+import { ClientOnly, Navbar, Modal, RegisterModal, LoginModal, RentModal } from '@/components'
 import { ToasterProvider } from '@/providers'
-
-import { Modal, RegisterModal, LoginModal } from '@/components/modal'
 
 import getCurrentUser from '@/app/actions/getCurrentUser'
 
@@ -28,6 +26,7 @@ export default async function RootLayout({
       <body className={font.className}>
         <ClientOnly>
           <ToasterProvider />
+          <RentModal />
           <LoginModal />
           <RegisterModal />
           <Navbar currentUser={currentUser} />

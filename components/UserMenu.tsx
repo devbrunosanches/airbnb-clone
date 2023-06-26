@@ -7,7 +7,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 
 import Avatar from './Avatar'
 import MenuItem from './MenuItem'
-import { useLoginModal, useRegisterModal } from '@/hooks'
+import { useLoginModal, useRegisterModal, useRentModal } from '@/hooks'
 import { SafeUser } from '@/app/types'
 
 interface UserMenuProps {
@@ -22,19 +22,28 @@ const UserMenu: React.FC<UserMenuProps> = ({
 
     const loginModal = useLoginModal()
 
+    const rentModal = useRentModal()
+
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleOpen = useCallback(() => {
         setIsOpen((value) => !value)
     }, [])
 
+    const onRent = useCallback(() => {
+        if(!currentUser) {
+            return loginModal.onOpen()
+        }
+        rentModal.onClose()
+    }, [currentUser, loginModal, rentModal])
+
     return (
         <div className='relative'>
             <div className="flex flex-row items-center gap-3">
                 <div className="text-sm font-semibold py-3 px-4
                 rounded-full transition cursor-pointer
-                md:block hover:bg-rose-600 hidden" // hidden
-                    onClick={() => { }}
+                md:block hover:bg-rose-600 hidden"
+                    onClick={onRent}
                 >
                     Airbnb your home
                 </div>
@@ -76,7 +85,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                                     label='My properties'
                                 />
                                 <MenuItem
-                                    onClick={() => {}}
+                                    onClick={rentModal.onOpen}
                                     label='Airbnb my home'
                                 />
                                 <hr />
