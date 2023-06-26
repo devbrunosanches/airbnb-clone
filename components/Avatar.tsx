@@ -5,10 +5,16 @@ import Image from 'next/image'
 
 import { avatar } from '@/assets'
 
-const Avatar = () => {
+interface AvatarProps {
+    src: string | null | undefined
+}
+
+const Avatar: React.FC<AvatarProps> = ({
+    src,
+}) => {
     return (
         <Image
-            src={avatar}
+            src={src || avatar}
             alt='avatar'
             width={45}
             height={45}

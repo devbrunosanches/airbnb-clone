@@ -1,8 +1,12 @@
-import './globals.css'
 import { Cabin } from 'next/font/google'
+import './globals.css'
 
-import { ClientOnly, Modal, Navbar, RegisterModal } from '@/components'
-import { ToasterProvider } from '@/src/providers'
+import { ClientOnly, Navbar } from '@/components'
+import { ToasterProvider } from '@/providers'
+
+import { Modal, RegisterModal, LoginModal } from '@/components/modal'
+
+import getCurrentUser from '@/app/actions/getCurrentUser'
 
 const font = Cabin({ subsets: ['latin'] })
 
@@ -11,18 +15,22 @@ export const metadata = {
   description: 'Airbnb Clone App',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
+  const currentUser = await getCurrentUser()
+
   return (
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
           <ToasterProvider />
+          <LoginModal />
           <RegisterModal />
-          <Navbar />
+          <Navbar currentUser={currentUser} />
         </ClientOnly>
         {children}
       </body>
