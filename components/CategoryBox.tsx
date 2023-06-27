@@ -23,7 +23,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     const handleClick = useCallback(() => {
         let currentQuery = {}
 
-        if(params) {
+        if (params) {
             currentQuery = qs.parse(params.toString())
         }
 
@@ -32,14 +32,14 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
             category: label,
         }
 
-        if(params?.get('category') === label) {
+        if (params?.get('category') === label) {
             delete updatedQuery.category
         }
 
         const url = qs.stringifyUrl({
             url: '/',
             query: updatedQuery,
-        }, {skipNull: true})
+        }, { skipNull: true })
 
         router.push(url)
 
@@ -52,7 +52,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         ${selected ? 'border-b-rose-600' : 'border-transparent'}
         ${selected ? 'text-rose-600' : 'text-black'}
         `}
-        onClick={handleClick}
+            onClick={handleClick}
         >
             <Icon size={24} />
             <div className="font-medium text-sm">

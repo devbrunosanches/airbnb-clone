@@ -16,6 +16,8 @@ import RegisterModal from "./modal/RegisterModal";
 import LoginModal from "./modal/LoginModal";
 import RentModal from "./modal/RentModal";
 import CategoryInput from "./CategoryInput";
+import CountrySelect from "./CountrySelect";
+import Map from "./Map";
 
 export {
     Navbar,
@@ -36,4 +38,6 @@ export {
     LoginModal,
     RentModal,
     CategoryInput,
+    CountrySelect,
+    Map,
 }

@@ -44,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({
 
         setShowModal(false)
         setTimeout(() => {
-            onClose //onClose()
+            onClose()
         }, 300)
     }, [disabled, onClose])
 
@@ -73,7 +73,7 @@ const Modal: React.FC<ModalProps> = ({
             <div className="flex justify-center items-center
                 overflow-x-hidden overflow-y-auto
                 fixed inset-0 z-50 outline-none
-                focus:outline-none bg-yellow-300/70"
+                focus:outline-none bg-yellow-200/10"
             >
                 <div className="relative w-full md:w-4/6 lg:w-3/6 
                     xl:w-2/5 my-6 mx-auto h-full lg:h-auto md:h-auto"

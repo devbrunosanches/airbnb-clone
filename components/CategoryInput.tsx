@@ -23,6 +23,7 @@ const CategoryInput: React.FC<CategoryInputProps> = ({
             ${selected ? 'border-rose-600' : 'border-black'}
             ${selected ? 'text-rose-600' : 'text-black'}
         `}
+            onClick={() => onClick(label)}
         >
             <Icon size={30} />
             <div className="font-semibold">

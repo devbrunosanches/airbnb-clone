@@ -109,7 +109,7 @@ const RegisterModal = () => {
             <div className="text-neutral-500 text-center mt-4 
                     font-light"
             >
-                <p>Already have an account? 
+                <p>Already have an account?
                     <span
                         onClick={onToggle}
                         className="text-neutral-800 cursor-pointer 
