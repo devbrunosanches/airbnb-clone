@@ -18,6 +18,8 @@ import RentModal from "./modal/RentModal";
 import CategoryInput from "./CategoryInput";
 import CountrySelect from "./CountrySelect";
 import Map from "./Map";
+import Counter from "./Counter";
+import ImageUpload from "./ImageUpload";
 
 export {
     Navbar,
@@ -40,4 +42,6 @@ export {
     CategoryInput,
     CountrySelect,
     Map,
+    Counter,
+    ImageUpload,
 }
