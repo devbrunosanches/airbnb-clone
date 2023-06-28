@@ -28,7 +28,7 @@ const Home = async ({ searchParams }: HomeProps) => {
           md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 
           2xl:grid-cols-6 gap-8 pt-24"
         >
-          {listings.map((listing: any) => (
+          {listings.map((listing) => (
             <ListingCard
               currentUser={currentUser}
               key={listing.id}
