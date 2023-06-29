@@ -2,6 +2,7 @@
 
 import React, { useCallback, useState } from 'react'
 import { signOut } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
 import { AiOutlineMenu } from 'react-icons/ai'
 
@@ -18,6 +19,8 @@ const UserMenu: React.FC<UserMenuProps> = ({
     currentUser,
 }) => {
 
+    const router = useRouter()
+
     const registerModal = useRegisterModal()
 
     const loginModal = useLoginModal()
@@ -31,10 +34,10 @@ const UserMenu: React.FC<UserMenuProps> = ({
     }, [])
 
     const onRent = useCallback(() => {
-        if(!currentUser) {
+        if (!currentUser) {
             return loginModal.onOpen()
         }
-        rentModal.onClose()
+        rentModal.onOpen()
     }, [currentUser, loginModal, rentModal])
 
     return (
@@ -69,29 +72,29 @@ const UserMenu: React.FC<UserMenuProps> = ({
                         {currentUser ? (
                             <>
                                 <MenuItem
-                                    onClick={() => {}}
                                     label='My trips'
+                                    onClick={() => router.push('/trips')}
                                 />
                                 <MenuItem
-                                    onClick={() => {}}
                                     label='My favorites'
+                                    onClick={() => router.push('/favorites')}
                                 />
                                 <MenuItem
-                                    onClick={() => {}}
                                     label='My reservations'
+                                    onClick={() => router.push('/reservations')}
                                 />
                                 <MenuItem
-                                    onClick={() => {}}
                                     label='My properties'
+                                    onClick={() => router.push('/properties')}
                                 />
                                 <MenuItem
-                                    onClick={rentModal.onOpen}
                                     label='Airbnb my home'
+                                    onClick={rentModal.onOpen}
                                 />
                                 <hr />
                                 <MenuItem
-                                    onClick={() => signOut()}
                                     label='Logout'
+                                    onClick={() => signOut()}
                                 />
                             </>
 
@@ -99,12 +102,12 @@ const UserMenu: React.FC<UserMenuProps> = ({
 
                             <>
                                 <MenuItem
-                                    onClick={loginModal.onOpen}
                                     label='Login'
+                                    onClick={loginModal.onOpen}
                                 />
                                 <MenuItem
-                                    onClick={registerModal.onOpen}
                                     label='Sign Up'
+                                    onClick={registerModal.onOpen}
                                 />
                             </>
                         )}
