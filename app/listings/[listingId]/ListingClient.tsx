@@ -10,7 +10,7 @@ import { Range } from "react-date-range"
 import { SafeListing, SafeReservation, SafeUser } from "@/app/types"
 import { useLoginModal } from "@/hooks"
 import { Container, ListingHead, ListingInfo, ListingReservation } from "@/components"
-import { categories } from "@/components/Categories"
+import { categories } from "@/components/categories/Categories"
 
 const initialDateRange = {
     startDate: new Date(),

@@ -7,7 +7,7 @@ import { useCountries } from "@/hooks"
 import { SafeUser } from "@/app/types"
 import { ListingCategory, Avatar } from "@/components"
 
-const Map = dynamic(() => import('../Map'), {
+const Map = dynamic(() => import('../main/Map'), {
     ssr: false
 })
 

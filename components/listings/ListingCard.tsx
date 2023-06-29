@@ -7,7 +7,7 @@ import { format } from 'date-fns'
 
 import { useCountries } from "@/hooks/"
 import { SafeListing, SafeReservation, SafeUser } from "@/app/types"
-import { Button, ClientOnly, HeartButton } from '@/components'
+import { Button, HeartButton } from '@/components'
 
 interface ListingCardProps {
     data: SafeListing;
@@ -99,7 +99,9 @@ const ListingCard: React.FC<ListingCardProps> = ({
                         $ {price}
                     </div>
                     {!reservation && (
-                        <div className="font-light">per day</div>
+                        <div className="font-light">
+                            / day
+                        </div>
                     )}
                 </div>
                 {onAction && actionLabel && (

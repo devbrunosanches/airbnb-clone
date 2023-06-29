@@ -3,6 +3,7 @@ import useLoginModal from "./useLoginModal";
 import useRentModal from "./useRentModal";
 import useCountries from "./useCountries";
 import useFavorite from "./useFavorite";
+import useSearchModal from "./useSearchModal";
 
 export {
     useRegisterModal,
@@ -10,4 +11,5 @@ export {
     useRentModal,
     useCountries,
     useFavorite,
+    useSearchModal,
 }

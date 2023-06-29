@@ -6,8 +6,7 @@ import { useRouter } from 'next/navigation'
 
 import { AiOutlineMenu } from 'react-icons/ai'
 
-import Avatar from './Avatar'
-import MenuItem from './MenuItem'
+import { Avatar, MenuItem } from '@/components'
 import { useLoginModal, useRegisterModal, useRentModal } from '@/hooks'
 import { SafeUser } from '@/app/types'
 
@@ -88,7 +87,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                                     onClick={() => router.push('/properties')}
                                 />
                                 <MenuItem
-                                    label='Airbnb my home'
+                                    label='Airbnb your home'
                                     onClick={rentModal.onOpen}
                                 />
                                 <hr />

@@ -10,7 +10,6 @@ import { FcGoogle } from "react-icons/fc"
 import { AiFillGithub } from "react-icons/ai"
 
 import { useRegisterModal, useLoginModal } from "@/hooks"
-
 import { Modal, Button, Heading, Input } from '@/components'
 
 const LoginModal = () => {

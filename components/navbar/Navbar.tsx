@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+
 import { Categories, Container, Logo, Search, UserMenu } from '@/components'
 import { SafeUser } from '@/app/types'
 

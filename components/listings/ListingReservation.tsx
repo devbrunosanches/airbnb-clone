@@ -34,7 +34,7 @@ const ListingReservation: React.FC<
                         $ {price}
                     </div>
                     <div className="font-light text-neutral-600">
-                        per day
+                        / day
                     </div>
                 </div>
                 <hr />

@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from 'zustand'
 
 interface RegisterModalStore {
   isOpen: boolean;
@@ -13,4 +13,4 @@ const useRegisterModal = create<RegisterModalStore>((set) => ({
 }));
 
 
-export default useRegisterModal;
+export default useRegisterModal

@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation'
 import Modal from './Modal'
 import { useRentModal } from '@/hooks'
 import { CategoryInput, Counter, CountrySelect, Heading, ImageUpload, Input } from '@/components'
-import { categories } from '../Categories'
+import { categories } from '../categories/Categories'
 import POST from '@/app/api/listings/route'
 
 enum STEPS {
@@ -57,7 +57,7 @@ const RentModal = () => {
     const bathroomCount = watch('bathroomCount')
     const imageSrc = watch('imageSrc')
 
-    const Map = useMemo(() => dynamic(() => import('../Map'), {
+    const Map = useMemo(() => dynamic(() => import('../main/Map'), {
         ssr: false
     }), [location]);
 

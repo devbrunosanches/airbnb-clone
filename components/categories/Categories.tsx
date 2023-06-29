@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import { usePathname, useSearchParams } from 'next/navigation'
 
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
 import {
@@ -20,7 +21,6 @@ import { MdOutlineVilla } from 'react-icons/md';
 import { BiHandicap, BiGame, BiFootball } from 'react-icons/bi'
 
 import { Container, CategoryBox } from '@/components'
-import { usePathname, useSearchParams } from 'next/navigation'
 
 export const categories = [
     {
